@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100..900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -23,8 +23,8 @@
 
   /*========== Font and typography ==========*/
   /* .5rem = 8px | 1rem = 16px ... */
-  --body-font:"Lato", sans-serif;;
-  --second-font:"Spartan", sans-serif;
+  --body-font: "Lato", sans-serif;
+  --second-font: "Spartan", sans-serif;
 
   --big-font-size: 3.5rem;
   --h1-font-size: 2.75rem;
@@ -747,12 +747,10 @@ input {
 
 .home__newsletter {
   margin-top: 2rem;
+  padding-block: 0.75rem;
 }
 .newsletter__container {
-  /* display: flex;
-  justify-content: space-between; */
   grid-template-columns: repeat(2, 3.5fr) 5fr;
-
   align-items: center;
 }
 
@@ -868,9 +866,58 @@ input {
   font-size: var(--small-font-size);
 }
 /*=============== BREADCRUMBS ===============*/
+.breadcrumb {
+  background-color: var(--container-color);
+  padding-block: 1.5rem;
+}
 
+.breadcrumb__list {
+  column-gap: 0.75rem;
+}
+
+.breadcrumb__link {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
 /*=============== SHOP ===============*/
+.total__products {
+  margin-bottom: 2.5rem;
+}
 
+.total__products span {
+  color: var(--first-color);
+  font-weight: var(--weight-600);
+}
+
+.pagination {
+  display: flex;
+  column-gap: 0.625rem;
+  margin-top: 2.75rem;
+}
+
+.pagination__link {
+  /* border: 2px solid blue; */
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 0.25rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  transition: all 0.15s var(--transition);
+}
+
+.pagination__link.active,
+.pagination__link:hover {
+  background-color: var(--first-color);
+  color: var(--body-color);
+}
+
+.pagination__link.icon {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
 /*=============== DETAILS ===============*/
 
 /*=============== DETAILS INFO & REVIEWS ===============*/
