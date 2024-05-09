@@ -1,5 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Spartan:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -14,7 +17,7 @@
   --text-color: hsl(154, 13%, 32%);
   --text-color-light: hsl(60, 1%, 56%);
   --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(176, 88%, 27%);
+  --container-color: hsl(0, 0%, 93%);
   --border-color: hsl(129, 36%, 85%);
   --border-color-alt: hsl(113, 15%, 90%);
 
@@ -22,6 +25,7 @@
   /* .5rem = 8px | 1rem = 16px ... */
   --body-font: "Lato", sans-serif;
   --second-font: "Spartan", sans-serif;
+
   --big-font-size: 3.5rem;
   --h1-font-size: 2.75rem;
   --h2-font-size: 2rem;
@@ -44,7 +48,7 @@
 }
 
 /* Responsive typography */
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   :root {
     --big-font-size: ;
     --h1-font-size: ;
@@ -57,7 +61,7 @@
     --smaller-font-size: ;
     --tiny-font-size: ;
   }
-}
+} */
 
 /*=============== BASE ===============*/
 * {
@@ -209,13 +213,13 @@ input {
   justify-content: space-between;
 }
 .nav__logo-img {
-  width: 150px;
+  width: 120px;
 }
 
 .nav__menu {
-  /* background-color: var(--first-color); */
   margin-left: 2.5rem;
-  width: 100%;
+  /* width: 100%; */
+  flex-grow: 1;
 }
 
 .nav__list {
@@ -255,7 +259,7 @@ input {
 }
 
 .header__action-btn img {
-  width: 30px;
+  width: 24px;
 }
 
 .header__action-btn .count {
@@ -266,6 +270,7 @@ input {
   color: var(--body-color);
   height: 18px;
   width: 18px;
+
   line-height: 18px;
   border-radius: 50%;
   text-align: center;
@@ -292,11 +297,10 @@ input {
   font-family: var(--second-font);
   font-weight: var(--weight-600);
   margin-bottom: 1rem;
-  display: block;
 }
 
 .home__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--big-font-size);
   font-weight: var(--weight-700);
   line-height: 1.4;
 }
@@ -645,7 +649,7 @@ input {
   position: relative;
 }
 
-.countdown__amount::after {
+.countdown__amount:not(.second__unit)::after {
   content: ":";
   color: var(--title-color);
   font-size: var(--large-font-size);
@@ -676,6 +680,11 @@ input {
 .deals__btn .btn {
   background-color: transparent;
   color: var(--first-color);
+}
+
+.deals__btn .btn:hover {
+  color: var(--body-color);
+  background-color: var(--first-color);
 }
 
 /*=============== NEW ARRIVALS ===============*/
@@ -732,15 +741,205 @@ input {
   margin-bottom: 0.5rem;
 }
 /*=============== NEWSLETTER ===============*/
+.newsletter {
+  background-color: hsl(166, 23%, 74%);
+}
 
+.home__newsletter {
+  margin-top: 2rem;
+  padding-block: 0.75rem;
+}
+.newsletter__container {
+  grid-template-columns: repeat(2, 3.5fr) 5fr;
+  align-items: center;
+}
+
+.newsletter__title {
+  column-gap: 1rem;
+  font-size: var(--large-font-size);
+}
+.newsletter__icon {
+  width: 40px;
+}
+
+.newsletter__description {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
+}
+
+.newsletter__form {
+  display: flex;
+}
+
+.newsletter__input,
+.newsletter__btn {
+  font-size: var(--small-font-size);
+}
+
+.newsletter__input {
+  background-color: var(--body-color);
+  height: 48px;
+  width: 100%;
+  padding-inline: 1.25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.newsletter__btn {
+  background-color: var(--title-color);
+  color: var(--body-color);
+  padding-inline: 2rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-family: var(--second-font);
+  font-weight: var(--weight-500);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s var(--transition);
+}
 /*=============== FOOTER ===============*/
 
+.footer__container {
+  grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;
+  padding-block: 2.5rem;
+}
+
+.footer__logo-img {
+  width: 120px;
+}
+
+.footer__subtitle {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  margin-block: 1.25rem 0.625rem;
+}
+
+.footer__description {
+  margin-bottom: 0.25rem;
+}
+
+.footer__description span {
+  font-weight: var(--weight-600);
+}
+
+.footer__social .footer__subtitle {
+  margin-top: 1.875rem;
+}
+
+.footer__social-links {
+  column-gap: 0.25rem;
+}
+
+.footer__social-icon {
+  width: 20px;
+  opacity: 0.7;
+}
+
+.footer__title {
+  font-size: var(--large-font-size);
+  margin-block: 1rem 1.25rem;
+}
+
+.footer__link {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  margin-bottom: 1rem;
+  display: block;
+  transition: all 0.3s var(--transition);
+}
+
+.footer__link:hover {
+  color: var(--first-color);
+  margin-left: 0.25rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--border-color-alt);
+}
+
+.copyright,
+.designer {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
 /*=============== BREADCRUMBS ===============*/
+.breadcrumb {
+  background-color: var(--container-color);
+  padding-block: 1.5rem;
+}
 
+.breadcrumb__list {
+  column-gap: 0.75rem;
+}
+
+.breadcrumb__link {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+}
 /*=============== SHOP ===============*/
+.total__products {
+  margin-bottom: 2.5rem;
+}
 
+.total__products span {
+  color: var(--first-color);
+  font-weight: var(--weight-600);
+}
+
+.pagination {
+  display: flex;
+  column-gap: 0.625rem;
+  margin-top: 2.75rem;
+}
+
+.pagination__link {
+  /* border: 2px solid blue; */
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 0.25rem;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  transition: all 0.15s var(--transition);
+}
+
+.pagination__link.active,
+.pagination__link:hover {
+  background-color: var(--first-color);
+  color: var(--body-color);
+}
+
+.pagination__link.icon {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
 /*=============== DETAILS ===============*/
+.details__container{
+  grid-template-columns: 5.5fr 6.5fr ;
+  border: 2px solid red;
+}
 
+.details__img{
+  margin-bottom: .5rem;
+}
+.details__small-images{
+grid-template-columns: repeat(4, 1fr);
+column-gap: .625rem;
+
+}
+
+.details__small-img{
+  cursor: pointer;
+}
+
+.details__group{
+  border: 2px solid blue;
+}
 /*=============== DETAILS INFO & REVIEWS ===============*/
 
 /*=============== CART ===============*/
