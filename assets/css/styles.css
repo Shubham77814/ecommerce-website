@@ -1,5 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Spartan:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -20,8 +23,9 @@
 
   /*========== Font and typography ==========*/
   /* .5rem = 8px | 1rem = 16px ... */
-  --body-font: "Lato", sans-serif;
-  --second-font: "Spartan", sans-serif;
+  --body-font:"Lato", sans-serif;;
+  --second-font:"Spartan", sans-serif;
+
   --big-font-size: 3.5rem;
   --h1-font-size: 2.75rem;
   --h2-font-size: 2rem;
@@ -44,7 +48,7 @@
 }
 
 /* Responsive typography */
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   :root {
     --big-font-size: ;
     --h1-font-size: ;
@@ -57,7 +61,7 @@
     --smaller-font-size: ;
     --tiny-font-size: ;
   }
-}
+} */
 
 /*=============== BASE ===============*/
 * {
@@ -293,11 +297,10 @@ input {
   font-family: var(--second-font);
   font-weight: var(--weight-600);
   margin-bottom: 1rem;
-  display: block;
 }
 
 .home__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--big-font-size);
   font-weight: var(--weight-700);
   line-height: 1.4;
 }
@@ -646,7 +649,7 @@ input {
   position: relative;
 }
 
-.countdown__amount::after {
+.countdown__amount:not(.second__unit)::after {
   content: ":";
   color: var(--title-color);
   font-size: var(--large-font-size);
@@ -677,6 +680,11 @@ input {
 .deals__btn .btn {
   background-color: transparent;
   color: var(--first-color);
+}
+
+.deals__btn .btn:hover {
+  color: var(--body-color);
+  background-color: var(--first-color);
 }
 
 /*=============== NEW ARRIVALS ===============*/
@@ -744,7 +752,7 @@ input {
   /* display: flex;
   justify-content: space-between; */
   grid-template-columns: repeat(2, 3.5fr) 5fr;
-  
+
   align-items: center;
 }
 
@@ -763,18 +771,16 @@ input {
   font-weight: var(--weight-600);
 }
 
-.newsletter__form{
+.newsletter__form {
   display: flex;
- 
 }
 
 .newsletter__input,
-.newsletter__btn{
+.newsletter__btn {
   font-size: var(--small-font-size);
-} 
+}
 
-
- .newsletter__input {
+.newsletter__input {
   background-color: var(--body-color);
   height: 48px;
   width: 100%;
@@ -792,9 +798,75 @@ input {
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s var(--transition);
-} 
+}
 /*=============== FOOTER ===============*/
 
+.footer__container {
+  grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;
+  padding-block: 2.5rem;
+}
+
+.footer__logo-img {
+  width: 120px;
+}
+
+.footer__subtitle {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  margin-block: 1.25rem 0.625rem;
+}
+
+.footer__description {
+  margin-bottom: 0.25rem;
+}
+
+.footer__description span {
+  font-weight: var(--weight-600);
+}
+
+.footer__social .footer__subtitle {
+  margin-top: 1.875rem;
+}
+
+.footer__social-links {
+  column-gap: 0.25rem;
+}
+
+.footer__social-icon {
+  width: 20px;
+  opacity: 0.7;
+}
+
+.footer__title {
+  font-size: var(--large-font-size);
+  margin-block: 1rem 1.25rem;
+}
+
+.footer__link {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  margin-bottom: 1rem;
+  display: block;
+  transition: all 0.3s var(--transition);
+}
+
+.footer__link:hover {
+  color: var(--first-color);
+  margin-left: 0.25rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--border-color-alt);
+}
+
+.copyright,
+.designer {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
 /*=============== BREADCRUMBS ===============*/
 
 /*=============== SHOP ===============*/
