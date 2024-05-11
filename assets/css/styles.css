@@ -290,7 +290,6 @@ table {
   color: var(--body-color);
   height: 18px;
   width: 18px;
-
   line-height: 18px;
   border-radius: 50%;
   text-align: center;
@@ -955,6 +954,7 @@ table {
 .details__img {
   margin-bottom: 0.5rem;
 }
+
 .details__small-images {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 0.625rem;
@@ -981,7 +981,6 @@ table {
   border-top: 1px solid var(--border-color-alt);
   border-bottom: 1px solid var(--border-color-alt);
   padding-block: 1rem;
-
   column-gap: 1rem;
 }
 
@@ -1095,7 +1094,7 @@ table {
 }
 
 .details__tab-content:not(.active-tab) {
-  border: 2px solid red;
+  
   display: none;
 }
 
@@ -1115,6 +1114,7 @@ table {
 }
 
 .reviews__container {
+  
   padding-bottom: 3rem;
   row-gap: 1.25rem;
 }
@@ -1306,16 +1306,16 @@ table {
   padding: 0.75rem 0.5rem;
 }
 
-.cart__total-title{
+.cart__total-title {
   font-size: var(--small-font-size);
 }
 
-.cart__total-price{
+.cart__total-price {
   font-size: var(--first-color);
   font-weight: var(--weight-700);
 }
 
-.cart__total .btn{
+.cart__total .btn {
   display: inline-flex;
 }
 /*=============== WISHLIST ===============*/
