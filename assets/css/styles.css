@@ -786,6 +786,7 @@ table {
   column-gap: 1rem;
   font-size: var(--large-font-size);
 }
+
 .newsletter__icon {
   width: 40px;
 }
@@ -1094,7 +1095,6 @@ table {
 }
 
 .details__tab-content:not(.active-tab) {
-  
   display: none;
 }
 
@@ -1114,7 +1114,6 @@ table {
 }
 
 .reviews__container {
-  
   padding-bottom: 3rem;
   row-gap: 1.25rem;
 }
@@ -1271,7 +1270,6 @@ table {
 /*=============== CART OTHERS ===============*/
 .cart__group {
   grid-template-columns: repeat(2, 1fr);
-
   align-items: flex-start;
 }
 
