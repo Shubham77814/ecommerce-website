@@ -780,6 +780,7 @@ table {
 .newsletter__container {
   grid-template-columns: repeat(2, 3.5fr) 5fr;
   align-items: center;
+  column-gap: 3rem;
 }
 
 .newsletter__title {
@@ -825,6 +826,10 @@ table {
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s var(--transition);
+}
+
+.newsletter__btn:hover {
+  background-color: var(--first-color);
 }
 /*=============== FOOTER ===============*/
 
@@ -1219,11 +1224,13 @@ table {
 .table__description,
 .table__price,
 .table__subtotal,
-.table__trash {
+.table__trash,
+.table__stock {
   font-size: var(--small-font-size);
 }
 
-.table__title {
+.table__title,
+.table__stock {
   color: var(--first-color);
 }
 
@@ -1315,6 +1322,7 @@ table {
 
 .cart__total .btn {
   display: inline-flex;
+  border: 2px solid red;
 }
 /*=============== WISHLIST ===============*/
 
