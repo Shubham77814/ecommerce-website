@@ -108,10 +108,151 @@
       </section>
 
       <!--=============== ACCOUNTS ===============-->
-      <section class="accounts"></section>
+      <section class="accounts section--lg">
+        <div class="accounts__container container grid">
+          <div class="account__tabs">
+            <p class="account__tab active-tab" data-target="#dashboard">
+              <i class="fi fi-rs-settings-sliders"></i> Dashboard
+            </p>
+
+            <p class="account__tab" data-target="#orders">
+              <i class="fi fi-rs-shopping-bag"></i> Orders
+            </p>
+
+            <p class="account__tab" data-target="#update-profile">
+              <i class="fi fi-rs-user"></i> Update Profile
+            </p>
+
+            <p class="account__tab" data-target="#address">
+              <i class="fi fi-rs-marker"></i> My address
+            </p>
+
+            <p class="account__tab" data-target="#change-password">
+              <i class="fi fi-rs-user"></i> Change Password
+            </p>
+
+            <p class="account__tab" data-target="#logout">
+              <i class="fi fi-rs-exit"></i> Logout
+            </p>
+          </div>
+
+          <div class="tabs__content">
+            <div class="tab__content active-tab" content id="dashboard">
+              <h3 class="tab__header">Hello Shubie doo</h3>
+
+              <div class="tab__body">
+                <p class="tab__description">
+                  From your account dashboard. you can easily check & view your
+                  recent orders, manage your shipping and billing addresses and
+                  edit your password and account details.
+                </p>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="orders">
+              <h3 class="tab__header">Your Orders</h3>
+
+              <div class="tab__body">
+                <table class="placed__order-table">
+                  <tr>
+                    <th>Orders</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                  </tr>
+
+                  <tr>
+                    <td>#1357</td>
+                    <td>May 25, 2024</td>
+                    <td>Processing</td>
+                    <td>$125.00</td>
+                    <td><a href="" class="view__order">View</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>#1357</td>
+                    <td>May 20, 2024</td>
+                    <td>Completed</td>
+                    <td>$280.00</td>
+                    <td><a href="" class="view__order">View</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>#1357</td>
+                    <td>March 25, 2024</td>
+                    <td>Completed</td>
+                    <td>$364.00</td>
+                    <td><a href="" class="view__order">View</a></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="update-profile">
+              <h3 class="tab__header">Update Profile</h3>
+
+              <div class="tab__body">
+                <form action="" class="form grid">
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="form__input"
+                  />
+
+                  <div class="form__btn">
+                    <button class="btn btn--md">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="address">
+              <h3 class="tab__header">shipping Address</h3>
+
+              <div class="tab__body">
+                <address class="address">Pheta-4, Batara, Bara, Nepal</address>
+
+                <p class="city">Batara</p>
+                <a href="" class="edit">Edit</a>
+              </div>
+            </div>
+
+            <div class="tab__content" content id="change-password">
+              <h3 class="tab__header">Change Password</h3>
+
+              <div class="tab__body">
+                <form action="" class="form grid">
+                  <input
+                    type="password"
+                    placeholder="Current Password"
+                    class="form__input"
+                  />
+
+                  <input
+                    type="password"
+                    placeholder="New Password"
+                    class="form__input"
+                  />
+
+                  <input
+                    type="password"
+                    placeholder=" Confirm New Password"
+                    class="form__input"
+                  />
+
+                  <div class="form__btn">
+                    <button class="btn btn--md">Save</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter section home__newsletter">
+      <section class="newsletter section">
         <div class="newsletter__container container grid">
           <h3 class="newsletter__title flex">
             <img
