@@ -1,11 +1,21 @@
 /*=============== SHOW MENU ===============*/
-
+const navMenu = document.querySelector("#nav__menu"),
+  navToggle = document.querySelector("#nav-toggle"),
+  navClose = document.querySelector("#nav-close");
 /*===== Menu Show =====*/
 /* Validate if constant exists */
-
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
 /*===== Hide Show =====*/
 /* Validate if constant exists */
-
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
 /*=============== IMAGE GALLERY ===============*/
 function imgGallery() {
   const mainImg = document.querySelector(".details__img"),
@@ -18,7 +28,6 @@ function imgGallery() {
   });
 }
 imgGallery();
-
 
 /*=============== SWIPER CATEGORIES ===============*/
 var swiperCategories = new Swiper(".categories__container", {
@@ -40,11 +49,11 @@ var swiperCategories = new Swiper(".categories__container", {
       spaceBetween: 24,
     },
 
-    992:{
+    992: {
       slidesPerView: 4,
       spaceBetween: 24,
     },
-    
+
     1200: {
       slidesPerView: 5,
       spaceBetween: 24,
